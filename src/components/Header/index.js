@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import { HeaderContainer, Title } from './styles'
+import { HeaderContainer, LinksContainer, Title } from './styles'
+import { Button } from "../Button"
 
 export const Header = () => {
   return (
@@ -8,13 +9,19 @@ export const Header = () => {
         React Blog
       </Title>
 
-      <Link to='/'>
-        Home
-      </Link>
+      <LinksContainer>
+        <Link to='/'>
+          <Button>
+            Home
+          </Button>
+        </Link>
 
-      <Link to='/post/create'>
-        Criar Post
-      </Link>
+        <Link to='/post/create'>
+          <Button>
+            Criar Post
+          </Button>
+        </Link>
+      </LinksContainer>
     </HeaderContainer>
   )
 }

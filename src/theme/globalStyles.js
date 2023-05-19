@@ -1,11 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
+import { backgroundColor, fontFamily, secondary } from './index'
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    font-family: "Open Sans", sans-serif;
+    font-family: ${fontFamily};
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    background-color: ${backgroundColor};
+    color: ${secondary};
   }
 
   a {
@@ -13,7 +15,9 @@ export const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  header {
-    background-color: blue;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 ` 
