@@ -4,6 +4,7 @@ import { Post } from "../../components/Post"
 import { Title } from "../../components/Title"
 import { PostsContainer } from "./styles"
 import { Error } from "../../components/Error"
+import { isString } from "../../utils/string"
 
 export const HomePage = () => {
   const [posts, setPost] = useState([]);
@@ -27,6 +28,8 @@ export const HomePage = () => {
 
   useEffect(() => {
     handleGetPosts()
+
+    console.log("🚀 ~ file: index.js:34 ~ useEffect ~  isString:", isString(true))
   }, [])
 
   return (
@@ -38,7 +41,6 @@ export const HomePage = () => {
       <PostsContainer>
         {
           posts.map(post => {
-            console.log(post)
             return (
               <Post
                 title={post.title}

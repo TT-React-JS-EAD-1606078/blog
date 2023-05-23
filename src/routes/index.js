@@ -7,7 +7,6 @@ import { PageContent } from '../styles/PageContent'
 export const AppRoutes = () => {
   return (
     <BrowserRouter>
-
       <Header />
 
       <PageContent>
